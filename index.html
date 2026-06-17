@@ -3,10 +3,93 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Nueva Página Web</title>
+    <title>Bio Hack - ODS 3</title>
+    <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
-    <h1>¡Hola, mundo! Mi página web está en vivo.</h1>
-    <p>Este es el inicio de un gran proyecto.</p>
+
+    <header>
+        <h1>Bio Hack</h1>
+        <p class="subtitulo">Tecnología y conciencia para una vida más saludable</p>
+    </header>
+
+    <main>
+        
+        <section id="introduccion">
+            <h2>Sobre el ODS 3: Salud y Bienestar</h2>
+            <p>
+                El Objetivo de Desarrollo Sostenible (ODS 3) busca garantizar una vida sana y promover el 
+                bienestar para todos en todas las edades. Su propósito central es asegurar la cobertura 
+                sanitaria universal, el acceso a medicamentos y vacunas seguros, y erradicar las principales 
+                enfermedades para 2030.
+            </p>
+
+            <h3>Nuestro Objetivo</h3>
+            <p>
+                Queremos ser un espacio para conocer y entender mejor cómo cuidar nuestro cuerpo. Aquí encontrarás 
+                información sencilla sobre los síntomas y alertas de las enfermedades más comunes en México, tanto 
+                las que se contagian como las que se desarrollan por hábitos o genética, para que aprendas a proteger 
+                tu salud y la de tu familia.
+            </p>
+            
+            <div class="registro-contenedor">
+                <a href="https://forms.office.com/Pages/DesignPageV2.aspx?origin=NeoPortalPage&subpage=design&id=OIIr_ImSX0Kxt7JwA9cR80atxRa8ZsNAg-Z2thv4EbJUNzI5U1lHN1QxR1o2TEpWWDlWUVNVN1hTVy4u" target="_blank" class="btn-registro">
+                    Registrar mi asistencia aquí
+                </a>
+            </div>
+        </section>
+
+        <section id="actividades">
+            <h2>Próximas Actividades y Eventos</h2>
+            <p class="fecha-evento">Día del evento: 17 de junio</p>
+            
+            <div class="lista-actividades">
+                
+                <article class="actividad-tarjeta">
+                    <h3>1. ¿Qué es el ODS 3?</h3>
+                    <p><strong>Descripción:</strong> ¿Qué aprenderás en este video? Una introducción clave a la Agenda 2030 y el ODS 3. Analizaremos las grandes metas globales en salud materna e infantil, así como el gran reto de salud que representan las enfermedades no transmisibles (como la Diabetes, el Asma y la Hipertensión) y cómo podemos contribuir activamente desde casa y la escuela.</p>
+                    <p><strong>Fecha:</strong> 17 de junio</p>
+                    <p><strong>Hora:</strong> 8:00 - 9:00</p>
+                    <p><strong>Modalidad:</strong> Virtual</p>
+                    <a href="https://www.google.com/search?q=Conferencias+sobre+el+ODS+3&oq=Conferencias+sobre+el+ODS+3+&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIHCAEQIRigATIHCAIQIRigAdIBCTEwNjA2ajBqN6gCALACAA&sourceid=chrome&ie=UTF-8#fpstate=ive&vld=cid:23225233,vid:b1IqDxvltbI,st:0" target="_blank" class="btn-enlace">Ver Conferencia</a>
+                </article>
+
+                <article class="actividad-tarjeta destacado">
+                    <h3>2. Trivia Bio-Desafío: Misión Salud</h3>
+                    <p><strong>Descripción:</strong> ¡Ponte a prueba en tiempo real! Participa en un juego interactivo diseñado directamente en nuestra web donde descubrirás mitos y realidades sobre los síntomas de las enfermedades comunes en México. Responde correctamente, evita los errores y acumula puntos mientras aprendes a cuidar tu entorno.</p>
+                    <p><strong>Fecha:</strong> 17 de junio</p>
+                    <p><strong>Hora:</strong> 9:00 - 10:00</p>
+                    <p><strong>Modalidad:</strong> Virtual (Integrado en esta página)</p>
+                    <a href="#juegos" class="btn-enlace ir-al-juego">Ir al Juego Interactivo</a>
+                </article>
+
+                <article class="actividad-tarjeta">
+                    <h3>3. Aprende a identificar y a reconocer las diferentes enfermedades</h3>
+                    <p><strong>Descripción:</strong> Pon a prueba tu ojo clínico en este desafío final a través de Kahoot. Aprenderás a reconocer las señales de alerta tempranas y los síntomas característicos de diferentes padecimientos transmisibles y crónicos, ayudándote a saber exactamente cuándo es momento de acudir al médico.</p>
+                    <p><strong>Fecha:</strong> 17 de junio</p>
+                    <p><strong>Hora:</strong> 10:00 - 11:00</p>
+                    <p><strong>Modalidad:</strong> Virtual</p>
+                    <a href="https://create.kahoot.it/share/trivia-medica/bd7056d3-2923-4937-ad06-8395b198f6ae" target="_blank" class="btn-enlace">Acceder al Kahoot</a>
+                </article>
+
+            </div>
+        </section>
+
+        <section id="juegos">
+            <h2>Zona de Juego: Trivia Bio-Desafío</h2>
+            <p>Lee las preguntas con atención y selecciona la opción correcta para ganar el desafío de salud.</p>
+            
+            <div id="contenedor-juego">
+                <p class="cargando">Cargando la interfaz de la trivia...</p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Bio Hack - Cuidando nuestra salud, transformando el futuro.</p>
+    </footer>
+
+    <script src="juego.js"></script>
 </body>
 </html>
