@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -7,13 +8,13 @@
     
     <style>
         :root {
-            --azul-principal: #1A365D;    /* Azul profundo para encabezados y seriedad */
-            --azul-secundario: #2B6CB0;   /* Azul claro para subtextos o enlaces */
-            --verde-acento: #2F855A;      /* Verde para botones principales y llamadas a la acción */
-            --verde-hover: #22543D;       /* Verde más oscuro para cuando pasas el mouse */
-            --blanco-fondo: #F7FAFC;      /* Fondo general muy limpio, casi blanco */
-            --blanco-puro: #FFFFFF;       /* Para las tarjetas y contenedores */
-            --gris-texto: #4A5568;        /* Gris oscuro para que la lectura sea cómoda */
+            --azul-principal: #1A365D;
+            --azul-secundario: #2B6CB0;
+            --verde-acento: #2F855A;
+            --verde-hover: #22543D;
+            --blanco-fondo: #F7FAFC;
+            --blanco-puro: #FFFFFF;
+            --gris-texto: #4A5568;
         }
 
         * {
@@ -30,7 +31,6 @@
             padding-bottom: 40px;
         }
 
-        /* Encabezado (Header) estilo Landing Page */
         header {
             background-color: var(--azul-principal);
             color: var(--blanco-puro);
@@ -52,7 +52,6 @@
             font-weight: 300;
         }
 
-        /* Contenedor Principal y Secciones */
         main {
             max-width: 1000px;
             margin: 40px auto;
@@ -89,7 +88,6 @@
             font-size: 1.05rem;
         }
 
-        /* Tarjetas de Actividades */
         .fecha-evento {
             font-weight: bold;
             color: var(--azul-secundario);
@@ -119,7 +117,6 @@
             box-shadow: 0 6px 12px rgba(0, 0, 0, 0.05);
         }
 
-        /* Destacar el Juego */
         .actividad-tarjeta.destacado {
             border: 2px solid var(--azul-secundario);
             background-color: #EBF8FF;
@@ -132,12 +129,6 @@
             font-size: 1.25rem;
         }
 
-        .actividad-tarjeta p {
-            font-size: 0.95rem;
-            margin-bottom: 10px;
-        }
-
-        /* Botones y Enlaces */
         .registro-contenedor {
             text-align: center;
             margin-top: 30px;
@@ -185,40 +176,65 @@
             background-color: var(--azul-principal);
         }
 
-        /* Contenedor del Juego Interactivo */
+        /* Estilos específicos para los elementos internos del juego interactivo */
         #contenedor-juego {
             background-color: var(--blanco-fondo);
-            border: 2px dashed #CBD5E0;
+            border: 1px solid #CBD5E0;
             border-radius: 8px;
             padding: 30px;
             text-align: center;
             margin-top: 20px;
-            min-height: 150px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
         }
 
-        /* Clases dinámicas requeridas para JavaScript */
+        .juego-pregunta {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            color: var(--azul-principal);
+        }
+
+        .botones-juego-contenedor {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .btn-juego {
+            padding: 10px 25px;
+            font-size: 1rem;
+            font-weight: bold;
+            border: 2px solid #CBD5E0;
+            border-radius: 6px;
+            background-color: white;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn-juego:hover {
+            background-color: #E2E8F0;
+        }
+
+        /* Clases dinámicas solicitadas */
         .correcto {
             background-color: #4CAF50 !important;
             color: white !important;
-            transition: all 0.3s ease;
+            border-color: #4CAF50 !important;
         }
 
         .incorrecto {
             background-color: #f44336 !important;
             color: white !important;
-            transition: all 0.3s ease;
+            border-color: #f44336 !important;
         }
 
-        .cargando {
-            font-style: italic;
-            color: #718096;
+        .juego-feedback {
+            font-weight: 600;
+            margin-top: 15px;
+            padding: 10px;
+            border-radius: 6px;
         }
 
-        /* Pie de página */
         footer {
             text-align: center;
             padding: 20px;
@@ -236,24 +252,11 @@
     </header>
 
     <main>
-        
         <section id="introduccion">
             <h2>Sobre el ODS 3: Salud y Bienestar</h2>
-            <p>
-                El Objetivo de Desarrollo Sostenible (ODS 3) busca garantizar una vida sana y promover el 
-                bienestar para todos en todas las edades. Su propósito central es asegurar la cobertura 
-                sanitaria universal, el acceso a medicamentos y vacunas seguros, y erradicar las principales 
-                enfermedades para 2030.
-            </p>
-
+            <p>El Objetivo de Desarrollo Sostenible (ODS 3) busca garantizar una vida sana y promover el bienestar para todos en todas las edades...</p>
             <h3>Nuestro Objetivo</h3>
-            <p>
-                Queremos ser un espacio para conocer y entender mejor cómo cuidar nuestro cuerpo. Aquí encontrarás 
-                información sencilla sobre los síntomas y alertas de las enfermedades más comunes en México, tanto 
-                las que se contagian como las que se desarrollan por hábitos o genética, para que aprendas a proteger 
-                tu salud y la de tu familia.
-            </p>
-            
+            <p>Queremos ser un espacio para conocer y entender mejor cómo cuidar nuestro cuerpo...</p>
             <div class="registro-contenedor">
                 <a href="https://forms.office.com/Pages/DesignPageV2.aspx?origin=NeoPortalPage&subpage=design&id=OIIr_ImSX0Kxt7JwA9cR80atxRa8ZsNAg-Z2thv4EbJUNzI5U1lHN1QxR1o2TEpWWDlWUVNVN1hTVy4u" target="_blank" class="btn-registro">
                     Registrar mi asistencia aquí
@@ -264,54 +267,39 @@
         <section id="actividades">
             <h2>Próximas Actividades y Eventos</h2>
             <p class="fecha-evento">Día del evento: 17 de junio</p>
-            
             <div class="lista-actividades">
-                
                 <article class="actividad-tarjeta">
                     <h3>1. ¿Qué es el ODS 3?</h3>
-                    <p><strong>Descripción:</strong> ¿Qué aprenderás en este video? Una introducción clave a la Agenda 2030 y el ODS 3. Analizaremos las grandes metas globales en salud materna e infantil, así como el gran reto de salud que representan las enfermedades no transmisibles (como la Diabetes, el Asma y la Hipertensión) y cómo podemos contribuir activamente desde casa y la escuela.</p>
-                    <p><strong>Fecha:</strong> 17 de junio</p>
-                    <p><strong>Hora:</strong> 8:00 - 9:00</p>
-                    <p><strong>Modalidad:</strong> Virtual</p>
-                    <a href="https://www.google.com/search?q=Conferencias+sobre+el+ODS+3&oq=Conferencias+sobre+el+ODS+3+&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIHCAEQIRigATIHCAIQIRigAdIBCTEwNjA2ajBqN6gCALACAA&sourceid=chrome&ie=UTF-8#fpstate=ive&vld=cid:23225233,vid:b1IqDxvltbI,st:0" target="_blank" class="btn-enlace">Ver Conferencia</a>
+                    <p><strong>Descripción:</strong> Introducción clave a la Agenda 2030 y retos de salud materna, infantil y enfermedades crónicas.</p>
+                    <a href="https://www.google.com/search?q=Conferencias+sobre+el+ODS+3" target="_blank" class="btn-enlace">Ver Conferencia</a>
                 </article>
 
                 <article class="actividad-tarjeta destacado">
                     <h3>2. Trivia Bio-Desafío: Misión Salud</h3>
-                    <p><strong>Descripción:</strong> ¡Ponte a prueba en tiempo real! Participa en un juego interactivo diseñado directamente en nuestra web donde descubrirás mitos y realidades sobre los síntomas de las enfermedades comunes en México. Responde correctamente, evita los errores y acumula puntos mientras aprendes a cuidar tu entorno.</p>
-                    <p><strong>Fecha:</strong> 17 de junio</p>
-                    <p><strong>Hora:</strong> 9:00 - 10:00</p>
-                    <p><strong>Modalidad:</strong> Virtual (Integrado en esta página)</p>
+                    <p><strong>Descripción:</strong> ¡Ponte a prueba en tiempo real! Participa en un juego interactivo diseñado directamente en nuestra web.</p>
                     <a href="#juegos" class="btn-enlace ir-al-juego">Ir al Juego Interactivo</a>
                 </article>
 
                 <article class="actividad-tarjeta">
-                    <h3>3. Aprende a identificar y a reconocer las diferentes enfermedades</h3>
-                    <p><strong>Descripción:</strong> Pon a prueba tu ojo clínico en este desafío final a través de Kahoot. Aprenderás a reconocer las señales de alerta tempranas y los síntomas característicos de diferentes padecimientos transmisibles y crónicos, ayudándote a saber exactamente cuándo es momento de acudir al médico.</p>
-                    <p><strong>Fecha:</strong> 17 de junio</p>
-                    <p><strong>Hora:</strong> 10:00 - 11:00</p>
-                    <p><strong>Modalidad:</strong> Virtual</p>
+                    <h3>3. Identificación de Enfermedades</h3>
+                    <p><strong>Descripción:</strong> Pon a prueba tu ojo clínico a través de un desafío final en Kahoot.</p>
                     <a href="https://create.kahoot.it/share/trivia-medica/bd7056d3-2923-4937-ad06-8395b198f6ae" target="_blank" class="btn-enlace">Acceder al Kahoot</a>
                 </article>
-
             </div>
         </section>
 
         <section id="juegos">
             <h2>Zona de Juego: Trivia Bio-Desafío</h2>
-            <p>Lee las preguntas con atención y selecciona la opción correcta para ganar el desafío de salud.</p>
+            <p style="margin-bottom: 20px;">Lee la afirmación sobre salud y selecciona si crees que es Verdadera o Falsa.</p>
             
-            <div id="contenedor-juego">
-                <p class="cargando">Cargando la interfaz de la trivia...</p>
-            </div>
+            <div id="contenedor-juego"></div>
         </section>
-
     </main>
 
     <footer>
         <p>&copy; 2026 Bio Hack - Cuidando nuestra salud, transformando el futuro.</p>
     </footer>
 
-    <script src="juego.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
